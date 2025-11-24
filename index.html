@@ -1,41 +1,102 @@
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>我的个人主页</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>我的主页</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Microsoft Yahei", sans-serif;
+            background: #f0f2f5;
+        }
+        header {
+            background: linear-gradient(135deg, #4a90e2, #6a5acd);
+            padding: 50px 20px;
+            text-align: center;
+            color: white;
+        }
+        h1 { margin: 0; font-size: 36px; }
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 20px;
+            padding: 0 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+        .card h2 { margin-top: 0; font-size: 22px; }
+        .card ul { padding-left: 20px; }
+        .card a {
+            text-decoration: none;
+            color: #4a90e2;
+        }
+    </style>
 </head>
 <body>
 <header>
-    <h1>你好，我是 XXX</h1>
-    <p>这里是我的个人主页</p>
+    <h1>欢迎来到我的主页</h1>
+    <p>一个简单又好看的卡片式网站</p>
 </header>
 
-<section id="about">
-    <h2>关于我</h2>
-    <p>这里写介绍，比如：我是某某大学学生/开发者/安全研究新手……</p>
-</section>
+<div class="container">
+    <div class="card">
+        <h2>📚 学习·上课资料</h2>
+        <ul>
+            <li><a href="#">课程讲义</a></li>
+            <li><a href="#">课堂笔记</a></li>
+            <li><a href="#">作业与资料</a></li>
+        </ul>
+    </div>
 
-<section id="projects">
-    <h2>项目展示</h2>
-    <ul>
-        <li><a href="#">项目 1 - 示例链接</a></li>
-        <li><a href="#">项目 2 - 示例链接</a></li>
-        <li><a href="#">项目 3 - 示例链接</a></li>
-    </ul>
-</section>
+    <div class="card">
+        <h2>🎮 游戏区域</h2>
+        <ul>
+            <li><a href="#">Steam 游戏推荐</a></li>
+            <li><a href="#">Switch 游戏记录</a></li>
+            <li><a href="#">独立游戏收藏</a></li>
+        </ul>
+    </div>
 
-<section id="contact">
-    <h2>联系我</h2>
-    <p>Email：你的邮箱@example.com</p>
-    <p>GitHub：<a href="https://github.com/你的用户名" target="_blank">我的 GitHub</a></p>
-</section>
+    <div class="card">
+        <h2>🎬 电影·视频</h2>
+        <ul>
+            <li><a href="#">电影观后感</a></li>
+            <li><a href="#">综艺/动画收藏</a></li>
+            <li><a href="#">Youtube 清单</a></li>
+        </ul>
+    </div>
 
-<footer>
-    <p>© 2025 My Homepage</p>
-</footer>
+    <div class="card">
+        <h2>📄 论文阅读</h2>
+        <ul>
+            <li><a href="#">AI & 系统科学</a></li>
+            <li><a href="#">网络安全方向</a></li>
+            <li><a href="#">读书笔记整理</a></li>
+        </ul>
+    </div>
 
-<script src="script.js"></script>
+    <div class="card">
+        <h2>💻 项目 Project</h2>
+        <ul>
+            <li><a href="#">个人项目 1</a></li>
+            <li><a href="#">课程项目 2</a></li>
+            <li><a href="#">GitHub 主页</a></li>
+        </ul>
+    </div>
+</div>
+
 </body>
 </html>
